@@ -20,45 +20,47 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          <h2>Gacha Task</h2>
-        </p>
-        <span style={{display:'flex', flexDirection: "row"}}>
+
+
+      <div className="App-header"> 
+      
+        <h1 style={{fontWeight:"bold" ,color:"#ffb8b8", position:"absolute", top:"200px", right:"40%", left:"40%"}}>Gacha Task</h1>
+
+        <div style={{display:'flex', flexDirection: "row", marginTop:"90px"}}>
           
-          <Card style={{ marginBottom: "20px", marginRight: "10px", color:"black", width: "300px" }}>
+          <Card style={{ marginBottom: "50px", marginRight: "10px", color:"black", width: "300px" }}>
             <Card body>
-            <p style={{color:"#FFCC5C", fontWeight:"bold"}}>Ways Hub</p>
+            <p style={{color:"#fd9644", fontWeight:"bold"}}>Ways Hub</p>
               <p>The number is: {random1}</p>
             </Card>
           </Card>
 
-          <Card style={{ marginBottom: "20px", marginRight: "10px",color:"black", width: "300px" }}>
+          <Card style={{ marginBottom: "50px", marginRight: "10px",color:"black", width: "300px" }}>
             <Card body>
-            <p style={{color:"#CCB288", fontWeight:"bold"}}>Ways Beans</p>
+            <p style={{color:"#EAB543", fontWeight:"bold"}}>Ways Beans</p>
               <p>The number is: {random2}</p>
               </Card>
           </Card>
 
-          <Card style={{ marginBottom: "20px", marginRight: "10px",color:"black", width: "300px" }}>
+          <Card style={{ marginBottom: "50px", marginRight: "10px",color:"black", width: "300px" }}>
             <Card body>          
-            <p style={{color:"#b7eabd", fontWeight:"bold"}}>Ways Vin</p>
+            <p style={{color:"#2ecc71", fontWeight:"bold"}}>Ways Vin</p>
               <p>The number is: {random3}</p>
               </Card>
           </Card>
 
-          <Card style={{ marginBottom: "20px", marginRight: "10px",color:"black", width: "300px" }}>
+          <Card style={{ marginBottom: "50px", marginRight: "10px",color:"black", width: "300px" }}>
             <Card body>
-            <p style={{color:"#fb6363", fontWeight:"bold"}}>Ways Bucks</p>
+            <p style={{color:"#e84118", fontWeight:"bold"}}>Ways Bucks</p>
               <p>The number is: {random4}</p>
               </Card>
           </Card>
-        </span>
+        </div>
 
-          <Button variant="info" onClick={handleClick} style={{width:"350px"}}>
-            Gacha
+          <Button onClick={handleClick} style={{width:"350px", background:"#0fbcf9"}}>
+            TURN
           </Button>
-      </header>
+      </div>
     </div>
   );
 }
