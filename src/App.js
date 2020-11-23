@@ -1,22 +1,40 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import {Card, Button} from 'react-bootstrap'
 import './App.css';
 
 function App() {
+
+  const [random1, setRandom1] = useState(0)
+  const [random2, setRandom2] = useState(0)
+  const [random3, setRandom3] = useState(0)
+  const [random4, setRandom4] = useState(0)
+
+  function handleClick(){
+    const max = 15;
+    const min = 1;
+    setRandom1( min + Math.floor(Math.random(1) * Math.floor(max)))
+    setRandom2( min + Math.floor(Math.random(1) * Math.floor(max)))
+    setRandom3( min + Math.floor(Math.random(1) * Math.floor(max)))
+    setRandom4( min + Math.floor(Math.random(1) * Math.floor(max)))
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <h2>Gacha Task</h2>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <Card style={{ marginBottom: "20px", color:"black" }}>
+            <Card body>
+              <p>The number is: {random1}</p>
+              <p>The number is: {random2}</p>
+              <p>The number is: {random3}</p>
+              <p>The number is: {random4}</p>
+            </Card>
+          </Card>
+          <Button variant="primary" onClick={handleClick}>
+            Gacha
+          </Button>
       </header>
     </div>
   );
