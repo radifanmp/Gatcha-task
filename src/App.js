@@ -24,15 +24,38 @@ function App() {
         <p>
           <h2>Gacha Task</h2>
         </p>
-          <Card style={{ marginBottom: "20px", color:"black" }}>
+        <span style={{display:'flex', flexDirection: "row"}}>
+          
+          <Card style={{ marginBottom: "20px", marginRight: "10px", color:"black", width: "300px" }}>
             <Card body>
+            <p style={{color:"#FFCC5C", fontWeight:"bold"}}>Ways Hub</p>
               <p>The number is: {random1}</p>
-              <p>The number is: {random2}</p>
-              <p>The number is: {random3}</p>
-              <p>The number is: {random4}</p>
             </Card>
           </Card>
-          <Button variant="primary" onClick={handleClick}>
+
+          <Card style={{ marginBottom: "20px", marginRight: "10px",color:"black", width: "300px" }}>
+            <Card body>
+            <p style={{color:"#CCB288", fontWeight:"bold"}}>Ways Beans</p>
+              <p>The number is: {random2}</p>
+              </Card>
+          </Card>
+
+          <Card style={{ marginBottom: "20px", marginRight: "10px",color:"black", width: "300px" }}>
+            <Card body>          
+            <p style={{color:"#b7eabd", fontWeight:"bold"}}>Ways Vin</p>
+              <p>The number is: {random3}</p>
+              </Card>
+          </Card>
+
+          <Card style={{ marginBottom: "20px", marginRight: "10px",color:"black", width: "300px" }}>
+            <Card body>
+            <p style={{color:"#fb6363", fontWeight:"bold"}}>Ways Bucks</p>
+              <p>The number is: {random4}</p>
+              </Card>
+          </Card>
+        </span>
+
+          <Button variant="info" onClick={handleClick} style={{width:"350px"}}>
             Gacha
           </Button>
       </header>
